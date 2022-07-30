@@ -3,6 +3,7 @@
     
     class Users {
         private static $table = 'usuarios';
+
         public static function verifyUser($data) {
             $connPdo = new \PDO(DBDRIVE.': host='.DBHOST.'; dbname='.DBNAME, DBUSER, DBPASS);
             $sql = 'SELECT * FROM ' .self::$table. ' WHERE login = :lo AND senha = :se and ativo = "S"';
@@ -41,5 +42,36 @@
                 }else {
                     throw new \Exception("Usuários não encontrados.");
                 }
+        }
+
+        public static function registerNewUser($data) {
+            
+            $connPdo = new \PDO(DBDRIVE.': host='.DBHOST.'; dbname='.DBNAME, DBUSER, DBPASS);
+            $sql = 'INSERT INTO usuarios (LOGIN, SENHA, NOME_COMPLETO) VALUE (:lo, :se, :nc)';
+            $stmt = $connPdo->prepare($sql);
+            $stmt->bindvalue(':lo', $data['login']);
+            $stmt->bindvalue(':se', $data['password']);
+            $stmt->bindvalue(':nc', $data['fullname']);
+            $stmt->execute();
+            $userId=$connPdo->lastInsertId();
+
+            foreach($data['autorizations'] as $autorization){
+
+                $sql = 'INSERT INTO autorizacoes (USUARIO_ID, CHAVE_AUTORIZACAO) VALUE (:ui, :ca)';
+                $stmt = $connPdo->prepare($sql);
+                $stmt->bindvalue(':ui', $userId);
+                $stmt->bindvalue(':ca', $autorization);
+                $stmt->execute();
             }
-    }
+
+            
+            if ($stmt->rowCount() > 0) { 
+                return "Usuário cadastrado com sucesso";
+            }else {
+                throw new \Exception("Não foi possivel cadastrar o usuário.");
+            }
+        }
+  
+  
+  
+        }

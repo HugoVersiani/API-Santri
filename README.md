@@ -13,6 +13,7 @@
 
 -Para o login, criei uma autenticação por JTW, um metodo seguro e consolidado no mercado</br>
 -Modifiquei a coluna "ATIVO" da tabela "USUARIOS" para que por padrão, sempre que inserido um novo usuário, este viesse como "S"(ativo)"<br/>
+-Ao cadastrar um novo usuário, adicionei a opção de cadastrar tambem as autorizações (nas instruções não estava sendo pedido)"<br/>
 
 
 ## EndPoints da API:

@@ -24,6 +24,9 @@ de maneira qua a visualização fique mais agradável. **Ajustei as margens late
 
 A API conta com 4 endpoints/funções sendo elas:
 
+<br/>
+<br/>
+
 ### localhost/public/api/auth/login:
 
 **login:** <br/>

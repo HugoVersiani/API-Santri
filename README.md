@@ -112,7 +112,7 @@ Inicie o servidor Apache e o MySql atravez do XAMPP. A index está dentro da pas
 
 
 
-<img src="static/IMG2.png" alt="Imagem do projeto">
-<img src="static/img1.png" alt="Imagem do projeto">
+<img src="public/static/IMG2.png" alt="Imagem do projeto">
+<img src="public/static/img1.png" alt="Imagem do projeto">
 
 

@@ -30,7 +30,7 @@ A API conta com 4 endpoints/funções sendo elas:
 
 <br/>
 
-## EndPints
+## EndPoints
 
 ### https://localhost/public/api/auth/login:
 

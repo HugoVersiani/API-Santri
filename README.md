@@ -38,10 +38,13 @@ A API conta com 4 endpoints/funções sendo elas:
 Faz login por JWT;<br/>
 Método: POST;<br/>
 Recebe:<br/><br/>
-{<br/>
+
+```bash
+{
 	"login":"MARIA",
 	"password":"123"
-<br/>}
+}
+```
 
 <br/>
 <br/>
@@ -52,6 +55,7 @@ Recebe:<br/><br/>
 Exibe/procura por usuarios pelo nome, caso o nome seja igual a vazio, ela exibe a lista completa;<br/>
 Método: GET;<br/>
 Recebe: name</br>
+Type: string<br/>
 
 <br/>
 <br/>
@@ -62,17 +66,19 @@ Recebe: name</br>
 Faz o cadastro de um novo usuário;<br/>
 Método: POST;<br/>
 Recebe:<br/><br/>
-{<br/>
+
+```bash
+{
 	"login":"Joaozinho",
- "password":"5656",
- "fullname":"Joao Pereira Silva",
- "autorizations":{
-													"0":"cadastrar_clientes",
-												 "1":"excluir_clientes",
-												 "2":"cadastrar_fornecedores"
-								}
+	"password":"5656",
+	"fullname":"Joao Pereira Silva",
+	"autorizations":{
+					"0":"cadastrar_clientes",
+					"1":"excluir_clientes",
+					"2":"cadastrar_fornecedores"
+				}
 }
-<br/>}
+```
 
 <br/>
 <br/>
@@ -83,6 +89,7 @@ Recebe:<br/><br/>
 Deleta usuários pelo Id;<br/>
 Método: Get;<br/>
 Recebe: Id<br/>
+Type: number<br/>
 
 <br/>
 <br/>

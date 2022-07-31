@@ -18,10 +18,22 @@
         }
 
         public function registerNewUser() {
+
             if(Auth::checkAuth()){
+                
                 $data = json_decode(file_get_contents("php://input"), true);
             
                 return Users::registerNewUser($data);                
+            }
+
+        }
+
+        public function deleteUserById($id = null) {
+          
+            if(Auth::checkAuth()){
+
+                 return Users::deleteUserById($id);
+                
             }
         }
 

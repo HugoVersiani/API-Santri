@@ -47,6 +47,7 @@
         public static function registerNewUser($data) {
             
             $connPdo = new \PDO(DBDRIVE.': host='.DBHOST.'; dbname='.DBNAME, DBUSER, DBPASS);
+
             $sql = 'INSERT INTO usuarios (LOGIN, SENHA, NOME_COMPLETO) VALUE (:lo, :se, :nc)';
             $stmt = $connPdo->prepare($sql);
             $stmt->bindvalue(':lo', $data['login']);
@@ -54,7 +55,7 @@
             $stmt->bindvalue(':nc', $data['fullname']);
             $stmt->execute();
             $userId=$connPdo->lastInsertId();
-
+           
             foreach($data['autorizations'] as $autorization){
 
                 $sql = 'INSERT INTO autorizacoes (USUARIO_ID, CHAVE_AUTORIZACAO) VALUE (:ui, :ca)';
@@ -63,14 +64,32 @@
                 $stmt->bindvalue(':ca', $autorization);
                 $stmt->execute();
             }
-
             
-            if ($stmt->rowCount() > 0) { 
+            if ($stmt->rowCount() > 0) {
+
                 return "Usuário cadastrado com sucesso";
-            }else {
-                throw new \Exception("Não foi possivel cadastrar o usuário.");
             }
+            
+            throw new \Exception("Não foi possivel cadastrar o usuário.");
+            
         }
+
+        public static function deleteUserById($data) {
+            $connPdo = new \PDO(DBDRIVE.': host='.DBHOST.'; dbname='.DBNAME, DBUSER, DBPASS);
+            $sql = "DELETE FROM usuarios WHERE USUARIO_ID=:id";
+            $stmt = $connPdo->prepare($sql);
+            $stmt->bindvalue(':id', $data);
+            $stmt->execute();
+
+            if ($stmt->rowCount() > 0) {
+                return "Usuário deletado com sucesso";
+            } else {
+                throw new \Exception("Não foi possivel deletar o usuário.");
+            }
+            
+            
+        }
+
   
   
   

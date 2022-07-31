@@ -32,7 +32,7 @@ A API conta com 4 endpoints/funções sendo elas:
 
 ## EndPints
 
-### localhost/public/api/auth/login:
+### https://localhost/public/api/auth/login:
 
 **login:** <br/>
 Faz login por JWT;<br/>
@@ -49,7 +49,7 @@ Recebe:<br/><br/>
 <br/>
 <br/>
 
-### localhost/public/api/auth/searchUser:
+### https://localhost/public/api/auth/searchUser:
 
 **searchUser:** <br/>
 Exibe/procura por usuarios pelo nome, caso o nome seja igual a vazio, ela exibe a lista completa;<br/>
@@ -60,7 +60,7 @@ Type: string<br/>
 <br/>
 <br/>
 
-### localhost/public/api/auth/registerNewUser:
+### https://localhost/public/api/auth/registerNewUser:
 
 **registerNewUser:** <br/>
 Faz o cadastro de um novo usuário;<br/>
@@ -83,7 +83,7 @@ Recebe:<br/><br/>
 <br/>
 <br/>
 
-### localhost/public/api/auth/deleteUserById:
+### https://localhost/public/api/auth/deleteUserById:
 
 **deleteUserById:** <br/>
 Deleta usuários pelo Id;<br/>

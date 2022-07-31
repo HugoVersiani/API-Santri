@@ -1,4 +1,4 @@
-# Teste Tecnico Santri
+# Teste Técnico Santri
 
 ## Considerações:
 

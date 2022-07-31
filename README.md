@@ -84,4 +84,20 @@ Método: Get;<br/>
 Recebe: Id<br/>
 
 
+## Para roda a aplicação localmente
+
+Faça o clone o projeto dentro da pasta htdoc do XAMPP
+
+```bash
+  git clone https://github.com/HugoVersiani/TesteTecnicoSantri.git
+```
+
+Instale as dependências
+
+```bash
+  composer install
+```
+
+Inicie o servidor Apache e o MySql atravez do XAMPP
+
 

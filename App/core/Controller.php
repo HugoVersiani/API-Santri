@@ -1,5 +1,7 @@
 <?php
     namespace App\core;
+    
+    header("Content-Type: application/json; charset=UTF-8");
 
     class Controller {
         private $request;

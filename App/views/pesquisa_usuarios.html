@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>santri</title>
+
+    <link rel="stylesheet" href="../../public/static/css/w3.css">
+    <link rel="stylesheet" href="../../public/static/css/santri.css">
+    <link rel="stylesheet" href="static/css/toastr.css">
+
+    <link rel="stylesheet" href="../../public/static/css-awesome/brands.css">
+    <link rel="stylesheet" href="../../public/static/css-awesome/fontawesome.css">
+    <link rel="stylesheet" href="../../public/static/css-awesome/regular.css">
+    <link rel="stylesheet" href="../../public/static/css-awesome/solid.css">
+    <link rel="stylesheet" href="../../public/static/css-awesome/svg-with-js.css">
+    <link rel="stylesheet" href="../../public/static/css-awesome/v4-shims.css">
+   
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+
+  </head>
+  <body  onload="getAllUsers()">
+
+    <script src="../../public/static/js/jquery.js"></script>
+    <div class="margin">
+      <div id="lista_usuarios" class="w3-margin">
+        <input id="userToSearch" class="w3-input w3-border w3-margin-top" type="text" placeholder="Nome">
+        <button onclick="searchUser()" class="w3-button w3-theme w3-margin-top">Buscar</button>
+        <a href="cadastro_usuarios.html"><button class="w3-button w3-theme w3-margin-top w3-right">Cadastrar novo usuário</button></a>
+        <table >
+          <thead>
+            <tr>
+              <th>Nome</td>
+              <th>Login</td>
+              <th>Ativo</td>
+              <th>Opções</td>  
+            </tr>
+          </thead>
+          <tbody id="userlist">
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+    <script  type="text/javascript" src="../../public/static/js/service.js"></script>
+  </body>
+</html>

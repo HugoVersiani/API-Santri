@@ -1,0 +1,14 @@
+.cor-fonte-padrao {
+  color: #9c1d1c;
+}
+
+.w3-theme {
+    color:#fff !important;
+    background: #9c1d1c !important;
+    border-radius: 5px;
+}
+
+.margin {
+  margin-left: 10%; 
+  margin-right: 10%; 
+}

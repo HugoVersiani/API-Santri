@@ -11,12 +11,9 @@ function loginApi() {
   })
   .done(function( data ) {
    if(data.status == 'erro') {
-    $('#loginReturn').html("")
-    var element = document.querySelector("#loginReturn");
-    
-    var text = document.createTextNode("Usuário não autenticado!");
-    return element.appendChild(text);
+        return toastr["error"]("Atenção", "Usuario não autenticado!");
    };
+    
     localStorage.setItem('user_token_jwt', data.data)
     window.location.href = "../App/views/pesquisa_usuarios.html";
   });
@@ -24,6 +21,7 @@ function loginApi() {
 
 
 function getAllUsers() {
+    
     $.ajax({
     url: "https://localhost/TesteTecnicoSantri/public/api/user/searchUser/",
     method: 'GET',
@@ -31,6 +29,7 @@ function getAllUsers() {
         'Authorization': 'Bearer '  + localStorage.getItem('user_token_jwt')
     },
     }).done(function(data) {
+        
         var user = data.data;
         $(user).each(function(i) {
 
@@ -53,6 +52,7 @@ function getAllUsers() {
             
         });
     })
+
 }
 
 
@@ -131,11 +131,8 @@ function newUser() {
         data: data,
         })
         .done(function( data ) {
-            $('#message').html("")
-
-            $('#message').append(
-                "<span>"+ data.data +"!</span>"
-            )
+            toastr["success"]("", data.data);
+           
         });
 
  

@@ -36,7 +36,7 @@
          <link rel="stylesheet" href="static/css-awesome/solid.css">
          <link rel="stylesheet" href="static/css-awesome/svg-with-js.css">
          <link rel="stylesheet" href="static/css-awesome/v4-shims.css">
-         
+         <script src="static/js/jquery.js"></script>
 
          <style>
             #login {
@@ -67,12 +67,14 @@
 
   </head>
   <body>
+    
+    <script src="static/js/toastr.min.js"></script>
     <script src="static/js/jquery.js"></script>
 
     <div  id="login">
       <img id="logo-cliente" class="w3-margin-top" src="static/imagens/logo_cliente.jpg"/>
-      <input id="loginValue" value="" class="w3-input w3-border w3-margin-top" type="text" placeholder="Usuário">
-      <input id="passwordValue" value="" class="w3-input w3-border w3-margin-top" type="password" placeholder="Senha">
+      <input required id="loginValue" value="" class="w3-input w3-border w3-margin-top" type="text" placeholder="Usuário">
+      <input required id="passwordValue" value="" class="w3-input w3-border w3-margin-top" type="password" placeholder="Senha">
       <div id="loginReturn">
         
       </div>

@@ -33,6 +33,11 @@ function getAllUsers() {
     }).done(function(data) {
         var user = data.data;
         $(user).each(function(i) {
+
+            if( user[i].ATIVO == "S") {
+                user[i].ATIVO = "Sim";
+            }
+            
         
             $('#userlist').append(
                 "<tr id='trlist'>" +
@@ -71,8 +76,14 @@ function searchUser() {
             
         var user = data.data;
         $(user).each(function(i) {
+
+            if( user[i].ATIVO == "S") {
+                user[i].ATIVO = "Sim";
+            }
+        
          
             $('#userlist').append(
+                
                 "<tr id='trlist'>" +
                 "<td>" + user[i].NOME_COMPLETO + "</td>" +
                 "<td>" + user[i].LOGIN + "</td>" +

@@ -22,13 +22,17 @@
     #message{
      color: green 
     }
+
+    a {
+      text-decoration: none;
+    }
   </style>
 
 </head>
 
 <body>
   <script src="../../public/static/js/jquery.js"></script>
-  <div>
+  <div  class="margin">
     <div id="lista_usuarios" class="w3-margin">
 
       <h4>Cadastro de usuários</h4>
@@ -61,7 +65,7 @@
         </ul>
     </form>
       
-
+      <button class="w3-button w3-theme w3-margin-top w3-margin-bottom"><a href="pesquisa_usuarios.html">Voltar</a></button>
       <button onclick="newUser()" class="w3-button w3-theme w3-margin-top w3-margin-bottom">Gravar</button>
       <button class="w3-button w3-margin-top w3-margin-bottom w3-right">Cancelar</button>
 

@@ -15,6 +15,8 @@
 -Ao cadastrar um novo usuário, adicionei a opção de cadastrar tambem as autorizações (nas instruções não estava sendo pedido);<br/>
 -Criei a função de deletar usuário  (nas instruções não estava sendo pedido);<br/>
 -As requisições estão sendo feitas no formato JSON utilizando AJAX/JQuery;<br/>
+-Por fim, adicionei uma navbar com o logotipo do cliente e realoquei a caixa de busca e o botão de cadastrar novo usuário,<br/>
+de maneira qua a visualização fique mais agradável. Ajustei as margens laterais e coloquei um botão "voltar" na tela final de cadastro de usuário.
 
 
 

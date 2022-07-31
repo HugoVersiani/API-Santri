@@ -96,6 +96,7 @@ Type: number<br/>
 
 ## Para roda a aplicação localmente
 
+
 Faça o clone o projeto dentro da pasta htdocs do XAMPP
 
 ```bash
@@ -109,6 +110,8 @@ Instale o composer
 ```
 
 Inicie o servidor Apache e o MySql atravez do XAMPP. A index está dentro da pasta public.
+
+Importe o arquivo Teste.sql na raiz deste repositório para o seu bd.
 
 
 

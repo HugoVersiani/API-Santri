@@ -102,12 +102,17 @@ Faça o clone o projeto dentro da pasta htdocs do XAMPP
   git clone https://github.com/HugoVersiani/TesteTecnicoSantri.git
 ```
 
-Instale as dependências
+Instale o composer
 
 ```bash
   composer install
 ```
 
 Inicie o servidor Apache e o MySql atravez do XAMPP. A index está dentro da pasta public.
+
+
+
+<img src="static/IMG2.png" alt="Imagem do projeto">
+<img src="static/img1.png" alt="Imagem do projeto">
 
 

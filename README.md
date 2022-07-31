@@ -35,6 +35,10 @@ Recebe:<br/><br/>
 	"password":"123"
 <br/>}
 
+<br/>
+<br/>
+<br/>
+
 ### localhost/public/api/auth/searchUser:
 
 **searchUser:** <br/>
@@ -42,6 +46,10 @@ Exibe/procura por usuarios pelo nome, caso o nome seja igual a vazio, ela exibe 
 Método: GET;<br/>
 Recebe: name</br>
 
+
+<br/>
+<br/>
+<br/>
 
 ### localhost/public/api/auth/registerNewUser:
 
@@ -61,6 +69,9 @@ Recebe:<br/><br/>
 }
 <br/>}
 
+<br/>
+<br/>
+<br/>
 
 ### localhost/public/api/auth/deleteUserById:
 

@@ -1,4 +1,4 @@
-# Teste Técnico Santri
+# API Santri 
 
 ## Considerações:
 
@@ -116,5 +116,7 @@ Importe o arquivo Teste.sql na raiz deste repositório para o seu bd.
 
 
 <img src="public/static/imagens/gif.gif" alt="Imagem do projeto">
+
+Obs: Este projeto foi um teste técnico que decidi utilizar como portifólio
 
 
